@@ -1,8 +1,11 @@
 package contracts;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public interface IMediator {
-    public ArrayList <String> query(String sqlRequest);
-    public void attachAdapter(IAdapter adapter);
+    void attachAdapter(IAdapter adapter);
+    HashMap <String, Integer> query1 () throws Exception;
+    Integer query2 ();
+    HashMap <String, Integer> query3 ();
 }
