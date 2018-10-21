@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d8306bc-b64e-4481-a2fb-52e8f5675a7c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/implementations/AdapterXML.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TPmediator/client/client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPmediator/client/client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TPmediator/contracts/IMediator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPmediator/contracts/IMediator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TPmediator/contracts/IAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPmediator/contracts/IAdapter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TPmediator/implementations/Mediator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TPmediator/implementations/Mediator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contracts/IAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/contracts/IAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contracts/IMediator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/contracts/IMediator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/implementations/AdapterXML.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/implementations/AdapterXML.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/implementations/Mediator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/implementations/Mediator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -65,14 +60,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1857" />
-          <entry key="txt" value="29" />
+          <entry key="java" value="2306" />
+          <entry key="txt" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1857" />
-          <entry key="PLAIN_TEXT" value="29" />
+          <entry key="JAVA" value="2306" />
+          <entry key="PLAIN_TEXT" value="35" />
         </counts>
       </usages-collector>
     </session>
@@ -82,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/implementations/Mediator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="180">
+              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
               <folding>
                 <element signature="e#245#246#0" expanded="true" />
                 <element signature="e#293#294#0" expanded="true" />
@@ -109,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/src/client/client.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,18 +115,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/implementations/AdapterXML.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="40" column="118" selection-start-line="40" selection-start-column="118" selection-end-line="40" selection-end-column="118" />
+            <state relative-caret-position="360">
+              <caret line="46" column="98" selection-start-line="46" selection-start-column="98" selection-end-line="46" selection-end-column="98" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#507#508#0" expanded="true" />
                 <element signature="e#547#548#0" expanded="true" />
-                <element signature="e#1683#1684#0" expanded="true" />
-                <element signature="e#1710#1711#0" expanded="true" />
-                <element signature="e#1772#1773#0" expanded="true" />
-                <element signature="e#1799#1800#0" expanded="true" />
-                <element signature="e#1845#1846#0" expanded="true" />
-                <element signature="e#1884#1885#0" expanded="true" />
+                <element signature="e#2232#2233#0" expanded="true" />
+                <element signature="e#2259#2260#0" expanded="true" />
+                <element signature="e#2321#2322#0" expanded="true" />
+                <element signature="e#2348#2349#0" expanded="true" />
+                <element signature="e#2394#2395#0" expanded="true" />
+                <element signature="e#2433#2434#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,9 +165,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/contracts/IAdapter.java" />
-        <option value="$PROJECT_DIR$/src/implementations/Mediator.java" />
         <option value="$PROJECT_DIR$/src/contracts/IMediator.java" />
         <option value="$PROJECT_DIR$/src/client/client.java" />
+        <option value="$PROJECT_DIR$/src/implementations/Mediator.java" />
         <option value="$PROJECT_DIR$/src/implementations/AdapterXML.java" />
       </list>
     </option>
@@ -190,9 +185,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="384" />
+    <option name="x" value="102" />
     <option name="y" value="27" />
-    <option name="width" value="1216" />
+    <option name="width" value="1498" />
     <option name="height" value="873" />
   </component>
   <component name="ProjectView">
@@ -246,7 +241,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540050652349" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540078921047" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -308,7 +303,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540031854376</updated>
-      <workItem from="1540031855641" duration="13827000" />
+      <workItem from="1540031855641" duration="15861000" />
     </task>
     <task id="LOCAL-00001" summary="first commit nas">
       <created>1540031946601</created>
@@ -317,21 +312,29 @@
       <option name="project" value="LOCAL" />
       <updated>1540031946601</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="XML">
+      <created>1540050671070</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1540050671070</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13827000" />
+    <option name="totallyTimeSpent" value="15861000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="384" y="27" width="1216" height="873" extended-state="0" />
+    <frame x="102" y="27" width="1498" height="873" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22517124" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1813793" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" weight="0.32968536" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
@@ -364,41 +367,20 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit nas" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit nas" />
+    <MESSAGE value="XML" />
+    <option name="LAST_COMMIT_MESSAGE" value="XML" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/contracts/IAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/contracts/IMediator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/implementations/Mediator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#245#246#0" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-            <element signature="e#582#583#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -415,10 +397,32 @@
         <state relative-caret-position="-1080" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/implementations/Mediator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <folding>
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#293#294#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#555#556#0" expanded="true" />
+            <element signature="e#582#583#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contracts/IAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/client.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -427,18 +431,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/implementations/AdapterXML.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="40" column="118" selection-start-line="40" selection-start-column="118" selection-end-line="40" selection-end-column="118" />
+        <state relative-caret-position="360">
+          <caret line="46" column="98" selection-start-line="46" selection-start-column="98" selection-end-line="46" selection-end-column="98" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#507#508#0" expanded="true" />
             <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#1683#1684#0" expanded="true" />
-            <element signature="e#1710#1711#0" expanded="true" />
-            <element signature="e#1772#1773#0" expanded="true" />
-            <element signature="e#1799#1800#0" expanded="true" />
-            <element signature="e#1845#1846#0" expanded="true" />
-            <element signature="e#1884#1885#0" expanded="true" />
+            <element signature="e#2232#2233#0" expanded="true" />
+            <element signature="e#2259#2260#0" expanded="true" />
+            <element signature="e#2321#2322#0" expanded="true" />
+            <element signature="e#2348#2349#0" expanded="true" />
+            <element signature="e#2394#2395#0" expanded="true" />
+            <element signature="e#2433#2434#0" expanded="true" />
           </folding>
         </state>
       </provider>

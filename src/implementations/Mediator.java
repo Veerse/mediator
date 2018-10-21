@@ -17,7 +17,7 @@ public class Mediator implements IMediator{
     @Override
     public void attachAdapter(IAdapter adapter) {
         this.adapters.add(adapter);
-        System.out.println("Adapter " + adapter.toString () + " attached");
+        //System.out.println("Adapter " + adapter.toString () + " attached");
     }
 
     @Override

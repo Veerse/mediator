@@ -28,17 +28,24 @@ public class AdapterXML implements IAdapter {
         org.w3c.dom.Document doc = builderFactory.newDocumentBuilder().parse(new FileInputStream(this.filePath));
 
         NodeList nodeList = doc.getElementsByTagName("*");
-        NodeList tmp;
-        System.out.println(nodeList.getLength());
+
+        String nameEnseignant;
 
         for (int i = 0; i < nodeList.getLength(); i++) {
             Node node = nodeList.item(i);
             if (node.getNodeType() == Node.ELEMENT_NODE) {
                 // do something with the current element
                 if(node.getNodeName() == "Enseignant") {
-                    System.out.println(node.getChildNodes().item(2).getTextContent());
+
+                    // Enseignant name
+                    nameEnseignant = node.getChildNodes().item(2).getTextContent();
+
+                    // item 5 is enseignements. If a teachent doesn't have enseignements, we cannot proceed...
                     if(node.getChildNodes().item(5).hasChildNodes()){
-                        System.out.println(node.getChildNodes().item(5).getChildNodes().item(0).getChildNodes().item(0).getTextContent());
+                        //System.out.println(node.getChildNodes().item(5).getChildNodes().item(0).getChildNodes().item(0).getTextContent());
+                        for (int j = 0; j < node.getChildNodes().item(5).getChildNodes().getLength(); j++){
+                            System.out.println(node.getChildNodes().item(5).getChildNodes().item(0).getChildNodes().getLength());
+                        }
                     }
                 }
             }
@@ -49,6 +56,7 @@ public class AdapterXML implements IAdapter {
     public HashMap<String, Integer> query1() throws FileNotFoundException, SAXException,
             IOException, ParserConfigurationException{
         this.lire_XML();
+        System.out.println("");
         return null;
     }
 
