@@ -1,5 +1,6 @@
 package contracts;
 
+import java.sql.SQLException;
 import java.util.HashMap;
 
 public interface IMediator {
@@ -8,8 +9,8 @@ public interface IMediator {
     HashMap<String, Integer> query1() throws Exception;
 
     // Nombre d'étudiants de France
-    Integer query2();
+    Integer query2() throws SQLException, IllegalAccessException, InstantiationException, ClassNotFoundException;
 
     // Nombre de cours par type (CM/TP/TD)
-    HashMap<String, Integer> query3();
+    HashMap<String, Integer> query3() throws SQLException;
 }

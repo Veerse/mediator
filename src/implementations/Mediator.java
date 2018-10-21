@@ -1,5 +1,6 @@
 package implementations;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -32,7 +33,7 @@ public class Mediator implements IMediator {
     }
 
     @Override
-    public Integer query2() {
+    public Integer query2() throws SQLException, IllegalAccessException, InstantiationException, ClassNotFoundException {
         Integer response = 0;
 
         for (IAdapter tmp : this.adapters) {
@@ -42,7 +43,7 @@ public class Mediator implements IMediator {
     }
 
     @Override
-    public HashMap<String, Integer> query3() {
+    public HashMap<String, Integer> query3() throws SQLException {
         HashMap<String, Integer> response = new HashMap<>();
 
         for (IAdapter tmp : this.adapters) {
