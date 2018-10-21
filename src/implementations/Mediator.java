@@ -6,11 +6,11 @@ import java.util.HashMap;
 import contracts.IAdapter;
 import contracts.IMediator;
 
-public class Mediator implements IMediator{
-    
-    ArrayList <IAdapter> adapters;
+public class Mediator implements IMediator {
 
-    public Mediator () {
+    ArrayList<IAdapter> adapters;
+
+    public Mediator() {
         this.adapters = new ArrayList<>();
     }
 
@@ -21,10 +21,10 @@ public class Mediator implements IMediator{
     }
 
     @Override
-    public HashMap<String, Integer> query1() throws Exception {
+    public HashMap<String, Integer> query1() {
         HashMap<String, Integer> response = new HashMap<>();
 
-        for (IAdapter tmp : this.adapters){
+        for (IAdapter tmp : this.adapters) {
             response = tmp.query1();
         }
 
@@ -33,11 +33,22 @@ public class Mediator implements IMediator{
 
     @Override
     public Integer query2() {
-        return null;
+        Integer response = 0;
+
+        for (IAdapter tmp : this.adapters) {
+            response += tmp.query2();
+        }
+        return response;
     }
 
     @Override
     public HashMap<String, Integer> query3() {
-        return null;
+        HashMap<String, Integer> response = new HashMap<>();
+
+        for (IAdapter tmp : this.adapters) {
+            response = tmp.query3();
+        }
+
+        return response;
     }
 }

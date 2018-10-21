@@ -19,7 +19,9 @@ public class client {
 
         mediator.attachAdapter(adapterXML);
 
-        System.out.println(mediator.query1 ());
+        System.out.println(mediator.query1());
+        System.out.println(mediator.query2());
+        System.out.println(mediator.query3());
 
     }
 }

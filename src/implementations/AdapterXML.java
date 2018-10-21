@@ -15,59 +15,95 @@ import org.xml.sax.SAXException;
 
 public class AdapterXML implements IAdapter {
 
-    String filePath;
+    private String filePath;
+    private org.w3c.dom.Document doc;
 
-    public AdapterXML (String pathFile) {
-        this.filePath = pathFile;
-    }
-
-    public void lire_XML () throws FileNotFoundException, SAXException,
+    public AdapterXML(String pathFile) throws FileNotFoundException, SAXException,
             IOException, ParserConfigurationException{
 
+        this.filePath = pathFile;
+
         DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
-        org.w3c.dom.Document doc = builderFactory.newDocumentBuilder().parse(new FileInputStream(this.filePath));
+        doc = builderFactory.newDocumentBuilder().parse(new FileInputStream(this.filePath));
+    }
 
-        NodeList nodeList = doc.getElementsByTagName("*");
 
-        String nameEnseignant;
+    @Override
+    public HashMap<String, Integer> query1()  {
+
+        HashMap <String, Integer> query1 = new HashMap<>();
+        NodeList nodeList = this.doc.getElementsByTagName("*");
 
         for (int i = 0; i < nodeList.getLength(); i++) {
             Node node = nodeList.item(i);
             if (node.getNodeType() == Node.ELEMENT_NODE) {
-                // do something with the current element
-                if(node.getNodeName() == "Enseignant") {
-
-                    // Enseignant name
-                    nameEnseignant = node.getChildNodes().item(2).getTextContent();
+                if (node.getNodeName().equals("Enseignant")) {
 
                     // item 5 is enseignements. If a teachent doesn't have enseignements, we cannot proceed...
-                    if(node.getChildNodes().item(5).hasChildNodes()){
-                        //System.out.println(node.getChildNodes().item(5).getChildNodes().item(0).getChildNodes().item(0).getTextContent());
-                        for (int j = 0; j < node.getChildNodes().item(5).getChildNodes().getLength(); j++){
-                            System.out.println(node.getChildNodes().item(5).getChildNodes().item(0).getChildNodes().getLength());
+                    if (node.getChildNodes().item(5).hasChildNodes()) {
+                        for (int j = 0; j < node.getChildNodes().item(5).getChildNodes().getLength(); j++) {
+
+                            // RETRIEVING TEACHER AND HOURS FOR EACH COURSE
+                            String teacher = node.getChildNodes().item(2).getTextContent();
+                            Integer hours = Integer.parseInt(node.getChildNodes().item(5).getChildNodes()
+                                    .item(j).getChildNodes() // j here because we're at "enseigne" node (use method item(j).getNodeName();)
+                                    .item(0).getChildNodes()
+                                    .item(0).getTextContent());
+
+                            // PUTTING IT TO THE HASH MAP
+                            if(query1.containsKey(teacher))
+                                query1.put(teacher, query1.get(teacher) + hours);
+                            else
+                                query1.put(teacher, hours);
+
                         }
                     }
+
                 }
             }
         }
-    }
-
-    @Override
-    public HashMap<String, Integer> query1() throws FileNotFoundException, SAXException,
-            IOException, ParserConfigurationException{
-        this.lire_XML();
-        System.out.println("");
-        return null;
+        return query1;
     }
 
     @Override
     public Integer query2() {
-        return null;
+        Integer query2 = 0;
+        NodeList nodeList = this.doc.getElementsByTagName("*");
+
+        for (int i = 0; i < nodeList.getLength(); i++) {
+            Node node = nodeList.item(i);
+            if (node.getNodeType() == Node.ELEMENT_NODE) {
+                if (node.getNodeName().equals("Etudiant")) {
+                    if(node.getChildNodes().item(3).getTextContent().toLowerCase().equals("france"))
+                        query2++;
+                }
+            }
+        }
+        return query2;
     }
 
     @Override
     public HashMap<String, Integer> query3() {
-        return null;
+        HashMap <String, Integer> query3 = new HashMap<>();
+        NodeList nodeList = this.doc.getElementsByTagName("*");
+
+        for (int i = 0; i < nodeList.getLength(); i++) {
+            Node node = nodeList.item(i);
+            if (node.getNodeType() == Node.ELEMENT_NODE) {
+                if (node.getNodeName().equals("Cours")) {
+
+                    // RETRIEVING COURSE TYPE
+                    String courseType = node.getChildNodes().item(3).getTextContent();
+
+                    // PUTTING IT TO THE HASH MAP OR IF EXISTS INCREMENTS
+                    if(query3.containsKey(courseType))
+                        query3.put(courseType, query3.get(courseType) + 1);
+                    else
+                        query3.put(courseType, 1);
+                }
+            }
+        }
+        return query3;
     }
 
     @Override
