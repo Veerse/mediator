@@ -1,24 +1,54 @@
 package implementations;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import contracts.IAdapter;
 import contracts.IMediator;
 
-public class Mediator implements IMediator{
-    
-    ArrayList <IAdapter> adapters;
+public class Mediator implements IMediator {
 
-    public Mediator () {
+    ArrayList<IAdapter> adapters;
 
+    public Mediator() {
+        this.adapters = new ArrayList<>();
     }
 
-    public ArrayList <String> query (String sqlRequest){
-        return null;
-    }
-
-    public void attachAdapter (IAdapter adapter){
+    @Override
+    public void attachAdapter(IAdapter adapter) {
         this.adapters.add(adapter);
+        //System.out.println("Adapter " + adapter.toString () + " attached");
     }
 
+    @Override
+    public HashMap<String, Integer> query1() {
+        HashMap<String, Integer> response = new HashMap<>();
+
+        for (IAdapter tmp : this.adapters) {
+            response = tmp.query1();
+        }
+
+        return response;
+    }
+
+    @Override
+    public Integer query2() {
+        Integer response = 0;
+
+        for (IAdapter tmp : this.adapters) {
+            response += tmp.query2();
+        }
+        return response;
+    }
+
+    @Override
+    public HashMap<String, Integer> query3() {
+        HashMap<String, Integer> response = new HashMap<>();
+
+        for (IAdapter tmp : this.adapters) {
+            response = tmp.query3();
+        }
+
+        return response;
+    }
 }
